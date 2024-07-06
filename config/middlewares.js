@@ -21,7 +21,13 @@ module.exports = [
       },
     },
   },
-  'strapi::cors',
+  {
+    name: 'strapi::cors',
+    config: {
+      enabled: true,
+      origin: ['http://localhost:3000', 'https://luna-studio.vercel.app'], // 添加你的前端域名
+    },
+  },
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
