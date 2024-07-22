@@ -34,4 +34,12 @@ module.exports = [
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
+  //設定單次請求資料上限
+  {
+    name: 'strapi::responses',
+    config: {
+      defaultLimit: 100,
+      maxLimit: 1000,
+    },
+  },
 ];
